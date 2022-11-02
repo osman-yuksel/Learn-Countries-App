@@ -6,8 +6,11 @@ import { useSelectedCountry } from "./SelectedCountryContext";
 
 function WorldMap(props: { DestroyMapHandler: Function }) {
   const { country, setCountry } = useSelectedCountry();
-  //Initiate world map
+
   useEffect(() => {
+    console.debug("map mounted");
+    
+    //Initiate world map
     const map = new jsVectorMap({
       selector: "#map",
       map: "world",
@@ -23,16 +26,15 @@ function WorldMap(props: { DestroyMapHandler: Function }) {
     });
 
     //Create event listeners for countries
-    document.querySelectorAll(".jvm-region")
-    .forEach((item) => {
+    const mapRegions = document.querySelectorAll(".jvm-region");
+    mapRegions.forEach((item) => {
       item.addEventListener("click", (e: any) => {
-        // console.log(e.target);
         setCountry(e.target.dataset.code);
-        // Destroying map for recreation.
-        map.destroy();
         props.DestroyMapHandler();
       })
     })
+    
+    return () => { map.destroy(); console.debug("map unmounted"); }
   }, [])
 
   return (
