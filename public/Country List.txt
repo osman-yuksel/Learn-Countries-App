@@ -1,176 +1,176 @@
-BD:"Bangladesh"
-BE:"Belgium"
-BF:"Burkina Faso"
-BG:"Bulgaria"
-BA:"Bosnia and Herz."
-BN:"Brunei"
-BO:"Bolivia"
-JP:"Japan"
-BI:"Burundi"
-BJ:"Benin"
-BT:"Bhutan"
-JM:"Jamaica"
-BW:"Botswana"
-BR:"Brazil"
-BS:"Bahamas"
-BY:"Belarus"
-BZ:"Belize"
-RU:"Russia"
-RW:"Rwanda"
-RS:"Serbia"
-LT:"Lithuania"
-LU:"Luxembourg"
-LR:"Liberia"
-RO:"Romania"
-GW:"Guinea-Bissau"
-GT:"Guatemala"
-GR:"Greece"
-GQ:"Eq. Guinea"
-GY:"Guyana"
-GE:"Georgia"
-GB:"United Kingdom"
-GA:"Gabon"
-GN:"Guinea"
-GM:"Gambia"
-GL:"Greenland"
-KW:"Kuwait"
-GH:"Ghana"
-OM:"Oman"
-_2:"Somaliland"
-_1:"Kosovo"
-_0:"N. Cyprus"
-JO:"Jordan"
-HR:"Croatia"
-HT:"Haiti"
-HU:"Hungary"
-HN:"Honduras"
-PR:"Puerto Rico"
-PS:"Palestine"
-PT:"Portugal"
-PY:"Paraguay"
-PA:"Panama"
-PG:"Papua New Guinea"
-PE:"Peru"
-PK:"Pakistan"
-PH:"Philippines"
-PL:"Poland"
-ZM:"Zambia"
-EH:"W. Sahara"
-EE:"Estonia"
-EG:"Egypt"
-ZA:"South Africa"
-EC:"Ecuador"
-AL:"Albania"
-AO:"Angola"
-KZ:"Kazakhstan"
-ET:"Ethiopia"
-ZW:"Zimbabwe"
-ES:"Spain"
-ER:"Eritrea"
-ME:"Montenegro"
-MD:"Moldova"
-MG:"Madagascar"
-MA:"Morocco"
-UZ:"Uzbekistan"
-MM:"Myanmar"
-ML:"Mali"
-MN:"Mongolia"
-MK:"Macedonia"
-MW:"Malawi"
-MR:"Mauritania"
-UG:"Uganda"
-MY:"Malaysia"
-MX:"Mexico"
-VU:"Vanuatu"
-FR:"France"
-FI:"Finland"
-FJ:"Fiji"
-FK:"Falkland Is."
-NI:"Nicaragua"
-NL:"Netherlands"
-NO:"Norway"
-NA:"Namibia"
-NC:"New Caledonia"
-NE:"Niger"
-NG:"Nigeria"
-NZ:"New Zealand"
-NP:"Nepal"
-CI:"Côte d'Ivoire"
-CH:"Switzerland"
-CO:"Colombia"
-CN:"China"
-CM:"Cameroon"
-CL:"Chile"
-CA:"Canada"
-CG:"Congo"
-CF:"Central African Rep."
-CD:"Dem. Rep. Congo"
-CZ:"Czech Rep."
-CY:"Cyprus"
-CR:"Costa Rica"
-CU:"Cuba"
-SZ:"Swaziland"
-SY:"Syria"
-KG:"Kyrgyzstan"
-KE:"Kenya"
-SS:"S. Sudan"
-SR:"Suriname"
-KH:"Cambodia"
-SV:"El Salvador"
-SK:"Slovakia"
-KR:"Korea"
-SI:"Slovenia"
-KP:"Dem. Rep. Korea"
-SO:"Somalia"
-SN:"Senegal"
-SL:"Sierra Leone"
-SB:"Solomon Is."
-SA:"Saudi Arabia"
-SE:"Sweden"
-SD:"Sudan"
-DO:"Dominican Rep."
-DJ:"Djibouti"
-DK:"Denmark"
-DE:"Germany"
-YE:"Yemen"
-AT:"Austria"
-DZ:"Algeria"
-US:"United States"
-LV:"Latvia"
-UY:"Uruguay"
-LB:"Lebanon"
-LA:"Lao PDR"
-TW:"Taiwan"
-TT:"Trinidad and Tobago"
-TR:"Turkey"
-LK:"Sri Lanka"
-TN:"Tunisia"
-TL:"Timor-Leste"
-TM:"Turkmenistan"
-TJ:"Tajikistan"
-LS:"Lesotho"
-TH:"Thailand"
-TF:"Fr. S. Antarctic Lands"
-TG:"Togo"
-TD:"Chad"
-LY:"Libya"
-AE:"United Arab Emirates"
-VE:"Venezuela"
-AF:"Afghanistan"
-IQ:"Iraq"
-IS:"Iceland"
-IR:"Iran"
-AM:"Armenia"
-IT:"Italy"
-VN:"Vietnam"
-AR:"Argentina"
-AU:"Australia"
-IL:"Israel"
-IN:"India"
-TZ:"Tanzania"
-AZ:"Azerbaijan"
-IE:"Ireland"
-ID:"Indonesia"
-UA:"Ukraine"
-QA:"Qatar"
-MZ:"Mozambique"
+{ code: "BD", name :"Bangladesh" },
+{ code: "BE", name :"Belgium" },
+{ code: "BF", name :"Burkina Faso" },
+{ code: "BG", name :"Bulgaria" },
+{ code: "BA", name :"Bosnia and Herz." },
+{ code: "BN", name :"Brunei" },
+{ code: "BO", name :"Bolivia" },
+{ code: "JP", name :"Japan" },
+{ code: "BI", name :"Burundi" },
+{ code: "BJ", name :"Benin" },
+{ code: "BT", name :"Bhutan" },
+{ code: "JM", name :"Jamaica" },
+{ code: "BW", name :"Botswana" },
+{ code: "BR", name :"Brazil" },
+{ code: "BS", name :"Bahamas" },
+{ code: "BY", name :"Belarus" },
+{ code: "BZ", name :"Belize" },
+{ code: "RU", name :"Russia" },
+{ code: "RW", name :"Rwanda" },
+{ code: "RS", name :"Serbia" },
+{ code: "LT", name :"Lithuania" },
+{ code: "LU", name :"Luxembourg" },
+{ code: "LR", name :"Liberia" },
+{ code: "RO", name :"Romania" },
+{ code: "GW", name :"Guinea-Bissau" },
+{ code: "GT", name :"Guatemala" },
+{ code: "GR", name :"Greece" },
+{ code: "GQ", name :"Eq. Guinea" },
+{ code: "GY", name :"Guyana" },
+{ code: "GE", name :"Georgia" },
+{ code: "GB", name :"United Kingdom" },
+{ code: "GA", name :"Gabon" },
+{ code: "GN", name :"Guinea" },
+{ code: "GM", name :"Gambia" },
+{ code: "GL", name :"Greenland" },
+{ code: "KW", name :"Kuwait" },
+{ code: "GH", name :"Ghana" },
+{ code: "OM", name :"Oman" },
+{ code: "_2", name :"Somaliland" },
+{ code: "_1", name :"Kosovo" },
+{ code: "_0", name :"N. Cyprus" },
+{ code: "JO", name :"Jordan" },
+{ code: "HR", name :"Croatia" },
+{ code: "HT", name :"Haiti" },
+{ code: "HU", name :"Hungary" },
+{ code: "HN", name :"Honduras" },
+{ code: "PR", name :"Puerto Rico" },
+{ code: "PS", name :"Palestine" },
+{ code: "PT", name :"Portugal" },
+{ code: "PY", name :"Paraguay" },
+{ code: "PA", name :"Panama" },
+{ code: "PG", name :"Papua New Guinea" },
+{ code: "PE", name :"Peru" },
+{ code: "PK", name :"Pakistan" },
+{ code: "PH", name :"Philippines" },
+{ code: "PL", name :"Poland" },
+{ code: "ZM", name :"Zambia" },
+{ code: "EH", name :"W. Sahara" },
+{ code: "EE", name :"Estonia" },
+{ code: "EG", name :"Egypt" },
+{ code: "ZA", name :"South Africa" },
+{ code: "EC", name :"Ecuador" },
+{ code: "AL", name :"Albania" },
+{ code: "AO", name :"Angola" },
+{ code: "KZ", name :"Kazakhstan" },
+{ code: "ET", name :"Ethiopia" },
+{ code: "ZW", name :"Zimbabwe" },
+{ code: "ES", name :"Spain" },
+{ code: "ER", name :"Eritrea" },
+{ code: "ME", name :"Montenegro" },
+{ code: "MD", name :"Moldova" },
+{ code: "MG", name :"Madagascar" },
+{ code: "MA", name :"Morocco" },
+{ code: "UZ", name :"Uzbekistan" },
+{ code: "MM", name :"Myanmar" },
+{ code: "ML", name :"Mali" },
+{ code: "MN", name :"Mongolia" },
+{ code: "MK", name :"Macedonia" },
+{ code: "MW", name :"Malawi" },
+{ code: "MR", name :"Mauritania" },
+{ code: "UG", name :"Uganda" },
+{ code: "MY", name :"Malaysia" },
+{ code: "MX", name :"Mexico" },
+{ code: "VU", name :"Vanuatu" },
+{ code: "FR", name :"France" },
+{ code: "FI", name :"Finland" },
+{ code: "FJ", name :"Fiji" },
+{ code: "FK", name :"Falkland Is." },
+{ code: "NI", name :"Nicaragua" },
+{ code: "NL", name :"Netherlands" },
+{ code: "NO", name :"Norway" },
+{ code: "NA", name :"Namibia" },
+{ code: "NC", name :"New Caledonia" },
+{ code: "NE", name :"Niger" },
+{ code: "NG", name :"Nigeria" },
+{ code: "NZ", name :"New Zealand" },
+{ code: "NP", name :"Nepal" },
+{ code: "CI", name :"Côte d'Ivoire" },
+{ code: "CH", name :"Switzerland" },
+{ code: "CO", name :"Colombia" },
+{ code: "CN", name :"China" },
+{ code: "CM", name :"Cameroon" },
+{ code: "CL", name :"Chile" },
+{ code: "CA", name :"Canada" },
+{ code: "CG", name :"Congo" },
+{ code: "CF", name :"Central African Rep." },
+{ code: "CD", name :"Dem. Rep. Congo" },
+{ code: "CZ", name :"Czech Rep." },
+{ code: "CY", name :"Cyprus" },
+{ code: "CR", name :"Costa Rica" },
+{ code: "CU", name :"Cuba" },
+{ code: "SZ", name :"Swaziland" },
+{ code: "SY", name :"Syria" },
+{ code: "KG", name :"Kyrgyzstan" },
+{ code: "KE", name :"Kenya" },
+{ code: "SS", name :"S. Sudan" },
+{ code: "SR", name :"Suriname" },
+{ code: "KH", name :"Cambodia" },
+{ code: "SV", name :"El Salvador" },
+{ code: "SK", name :"Slovakia" },
+{ code: "KR", name :"Korea" },
+{ code: "SI", name :"Slovenia" },
+{ code: "KP", name :"Dem. Rep. Korea" },
+{ code: "SO", name :"Somalia" },
+{ code: "SN", name :"Senegal" },
+{ code: "SL", name :"Sierra Leone" },
+{ code: "SB", name :"Solomon Is." },
+{ code: "SA", name :"Saudi Arabia" },
+{ code: "SE", name :"Sweden" },
+{ code: "SD", name :"Sudan" },
+{ code: "DO", name :"Dominican Rep." },
+{ code: "DJ", name :"Djibouti" },
+{ code: "DK", name :"Denmark" },
+{ code: "DE", name :"Germany" },
+{ code: "YE", name :"Yemen" },
+{ code: "AT", name :"Austria" },
+{ code: "DZ", name :"Algeria" },
+{ code: "US", name :"United States" },
+{ code: "LV", name :"Latvia" },
+{ code: "UY", name :"Uruguay" },
+{ code: "LB", name :"Lebanon" },
+{ code: "LA", name :"Lao PDR" },
+{ code: "TW", name :"Taiwan" },
+{ code: "TT", name :"Trinidad and Tobago" },
+{ code: "TR", name :"Turkey" },
+{ code: "LK", name :"Sri Lanka" },
+{ code: "TN", name :"Tunisia" },
+{ code: "TL", name :"Timor-Leste" },
+{ code: "TM", name :"Turkmenistan" },
+{ code: "TJ", name :"Tajikistan" },
+{ code: "LS", name :"Lesotho" },
+{ code: "TH", name :"Thailand" },
+{ code: "TF", name :"Fr. S. Antarctic Lands" },
+{ code: "TG", name :"Togo" },
+{ code: "TD", name :"Chad" },
+{ code: "LY", name :"Libya" },
+{ code: "AE", name :"United Arab Emirates" },
+{ code: "VE", name :"Venezuela" },
+{ code: "AF", name :"Afghanistan" },
+{ code: "IQ", name :"Iraq" },
+{ code: "IS", name :"Iceland" },
+{ code: "IR", name :"Iran" },
+{ code: "AM", name :"Armenia" },
+{ code: "IT", name :"Italy" },
+{ code: "VN", name :"Vietnam" },
+{ code: "AR", name :"Argentina" },
+{ code: "AU", name :"Australia" },
+{ code: "IL", name :"Israel" },
+{ code: "IN", name :"India" },
+{ code: "TZ", name :"Tanzania" },
+{ code: "AZ", name :"Azerbaijan" },
+{ code: "IE", name :"Ireland" },
+{ code: "ID", name :"Indonesia" },
+{ code: "UA", name :"Ukraine" },
+{ code: "QA", name :"Qatar" },
+{ code: "MZ", name :"Mozambique" },

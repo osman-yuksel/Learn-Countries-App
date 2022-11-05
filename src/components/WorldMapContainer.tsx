@@ -1,4 +1,5 @@
 import WorldMap from "./WorldMap";
+import CountrySearch from "./CountrySearch";
 import { useState } from "react";
 
 function WorldMapContainer() {
@@ -19,6 +20,7 @@ function WorldMapContainer() {
 
   return (
     <div>
+      <CountrySearch DestroyMapHandler={ DestroyMapHandler }/>
       <WorldMap DestroyMapHandler={ DestroyMapHandler } />
       <button onClick={ DestroyMapHandler }>
         Destroy
