@@ -3,9 +3,11 @@ import "jsvectormap/dist/maps/world.js";
 import "jsvectormap/dist/css/jsvectormap.css";
 import { useEffect, useState } from "react";
 import { useSelectedCountry } from "./SelectedCountryContext";
+import { useSettings } from "./SettingsContext";
 
 function WorldMap(props: { DestroyMapHandler: Function }) {
   const { country, setCountry } = useSelectedCountry();
+  const { settings, setSettings } = useSettings();
 
   useEffect(() => {
     console.debug("map mounted");
@@ -14,10 +16,10 @@ function WorldMap(props: { DestroyMapHandler: Function }) {
     const map = new jsVectorMap({
       selector: "#map",
       map: "world",
-      focusOn: {
+      ...(settings.selectedFocus) && { focusOn: {
         region: country,
-        animate: true,
-      },
+        animate: settings.focusAnimation,
+      }},
       regionStyle: {
         selected: { fill: 'red' },
         selectedHover: { fill: 'purple' }

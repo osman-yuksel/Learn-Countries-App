@@ -1,5 +1,6 @@
 import WorldMap from "./WorldMap";
 import CountrySearch from "./CountrySearch";
+import SettingsMenu from "./SettingsMenu";
 import { useState } from "react";
 
 function WorldMapContainer() {
@@ -20,7 +21,11 @@ function WorldMapContainer() {
 
   return (
     <div>
+      <div className="flex flex-row"
+      >
       <CountrySearch DestroyMapHandler={ DestroyMapHandler }/>
+      <SettingsMenu />
+      </div>
       <WorldMap DestroyMapHandler={ DestroyMapHandler } />
       <button onClick={ DestroyMapHandler }>
         Destroy

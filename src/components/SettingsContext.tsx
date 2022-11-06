@@ -25,7 +25,14 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
   const localSettings = localStorage.getItem("settings");
 
   const [settings, setSettings] = useState<SettingsData>((localSettings ? JSON.parse(localSettings) : null) as SettingsData);
-  useEffect(() => { console.log("Provider", settings) }, [settings]);
+  useEffect(() => { 
+    console.log("Provider", settings) 
+    localStorage.setItem("settings", JSON.stringify({
+      darkMode: settings.darkMode,
+      selectedFocus: settings.selectedFocus,
+      focusAnimation: settings.focusAnimation,
+    }))
+  }, [settings]);
   
   const values = { settings, setSettings };
   return (
