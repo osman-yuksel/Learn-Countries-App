@@ -1,4 +1,5 @@
 import React,{ createContext, ReactNode, useContext, useState, useEffect } from "react";
+import { fetchCountryData } from './CountryData';
 
 type SelectedCountry = {
   country: string,
@@ -9,7 +10,10 @@ const SelectedCountryContext = createContext<SelectedCountry>({} as SelectedCoun
 
 export const SelectedCountryProvider = ({ children }: { children: ReactNode }) => {
   const [country, setCountry] = useState<string>("");
-  useEffect(() => { console.log("Provider", country) }, [country]);
+  useEffect(() => { 
+    console.log("Provider", country)
+    if (country) fetchData(country);
+  }, [country]);
 
   const values = { country, setCountry };
   return (
@@ -20,3 +24,9 @@ export const SelectedCountryProvider = ({ children }: { children: ReactNode }) =
 }
 
 export const useSelectedCountry = () => useContext(SelectedCountryContext);
+
+async function fetchData(code: string) {
+  const data = await fetchCountryData(code);
+  console.log(data);
+  return data;
+}

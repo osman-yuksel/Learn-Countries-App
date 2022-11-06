@@ -1,10 +1,10 @@
 import React, { useState }from 'react';
-import { CountryData, Country } from './CountryData';
+import { CountryNameData, Country } from './CountryData';
 import { useSelectedCountry } from "./SelectedCountryContext";
 
 function CountrySearch(props: { DestroyMapHandler: Function }) {
   const [query, setQuery] = useState<string>("");
-  const countryData = CountryData();
+  const countryData = CountryNameData();
   const [validCountries, setValidCountries] = useState<Array<{ country: Country, index: number }>>([]);
   const { country, setCountry } = useSelectedCountry();
 

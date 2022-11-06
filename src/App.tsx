@@ -1,12 +1,15 @@
 import WorldMapContainer from "./components/WorldMapContainer";
 import { SelectedCountryProvider } from "./components/SelectedCountryContext";
+import { SettingsProvider } from "./components/SettingsContext";
 
 function App() {
   return (
     <div className="App">
-      <SelectedCountryProvider>
-        <WorldMapContainer />
-      </SelectedCountryProvider>
+      <SettingsProvider>
+        <SelectedCountryProvider>
+          <WorldMapContainer />
+        </SelectedCountryProvider>
+      </SettingsProvider>
     </div>
   );
 }
