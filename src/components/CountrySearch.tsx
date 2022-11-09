@@ -4,7 +4,7 @@ import { useSelectedCountry } from "./SelectedCountryContext";
 
 function CountrySearch(props: { DestroyMapHandler: Function }) {
   const [query, setQuery] = useState<string>("");
-  const countryData = CountryNameData();
+  const countryData = CountryNameData(); //All codes and names
   const [validCountries, setValidCountries] = useState<
     Array<{ country: Country; index: number }>
   >([]);
@@ -54,7 +54,7 @@ type CountryQuery = {
   index: number;
 };
 
-function SearchCountries(name: string, data: Array<Country>) {
+function SearchCountries(name: string, data: Array<Country>): Array<CountryQuery> {
   const validCountries = [] as Array<CountryQuery>;
   let index: number = -1;
   data.forEach((item: Country) => {
@@ -66,6 +66,7 @@ function SearchCountries(name: string, data: Array<Country>) {
   return validCountries.sort(Sort);
 }
 
+//sorting by alphabetical order
 function Sort(a: CountryQuery, b: CountryQuery) {
   return a.index - b.index;
 }

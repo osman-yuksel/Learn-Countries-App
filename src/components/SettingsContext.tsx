@@ -20,6 +20,7 @@ type SettingsData = {
 const SettingsContext = createContext<Settings>({} as Settings);
 
 export const SettingsProvider = ({ children }: { children: ReactNode }) => {
+  //Set default settings if none exists
   if (!localStorage.getItem("settings")) {
     localStorage.setItem(
       "settings",
@@ -36,6 +37,7 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
   const [settings, setSettings] = useState<SettingsData>(
     (localSettings ? JSON.parse(localSettings) : null) as SettingsData
   );
+  
   useEffect(() => {
     console.log("Provider", settings);
     localStorage.setItem(

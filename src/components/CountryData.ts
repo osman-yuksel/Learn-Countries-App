@@ -199,7 +199,7 @@ export function CountryNameData(): Array<Country> {
   ]
 }
 
-
+//For searching TODO: useMemo() for optimizing.
 export const SafeRecordLookup = <Key extends string>(key: Key) =>
   <T extends Record<string, string>>(record: T): T[Key] | undefined => record[key];
 

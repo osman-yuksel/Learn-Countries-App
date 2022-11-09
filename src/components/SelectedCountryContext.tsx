@@ -5,7 +5,6 @@ import React, {
   useState,
   useEffect,
 } from "react";
-import { fetchCountryData } from "./CountryData";
 
 type SelectedCountry = {
   country: string;
@@ -35,9 +34,3 @@ export const SelectedCountryProvider = ({
 };
 
 export const useSelectedCountry = () => useContext(SelectedCountryContext);
-
-async function fetchData(code: string) {
-  const data = await fetchCountryData(code);
-  console.log(data);
-  return data;
-}
