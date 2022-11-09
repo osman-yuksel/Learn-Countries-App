@@ -11,18 +11,20 @@ function WorldMap(props: { DestroyMapHandler: Function }) {
 
   useEffect(() => {
     console.debug("map mounted");
-    
+
     //Initiate world map
     const map = new jsVectorMap({
       selector: "#map",
       map: "world",
-      ...(settings.selectedFocus) && { focusOn: {
-        region: country,
-        animate: settings.focusAnimation,
-      }},
+      ...(settings.selectedFocus && {
+        focusOn: {
+          region: country,
+          animate: settings.focusAnimation,
+        },
+      }),
       regionStyle: {
-        selected: { fill: 'red' },
-        selectedHover: { fill: 'purple' }
+        selected: { fill: "red" },
+        selectedHover: { fill: "purple" },
       },
       selectedRegions: [country],
     });
@@ -33,17 +35,16 @@ function WorldMap(props: { DestroyMapHandler: Function }) {
       item.addEventListener("click", (e: any) => {
         setCountry(e.target.dataset.code);
         props.DestroyMapHandler();
-      })
-    })
-    
-    return () => { map.destroy(); console.debug("map unmounted"); }
-  }, [])
+      });
+    });
 
-  return (
-    <div id="map" 
-      style={{ width: "1200px", height: "600px" }} 
-    />
-  )
+    return () => {
+      map.destroy();
+      console.debug("map unmounted");
+    };
+  }, []);
+
+  return <div id="map" style={{ width: "1200px", height: "600px" }} />;
 }
 
 export default WorldMap;
