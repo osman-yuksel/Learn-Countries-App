@@ -16,12 +16,12 @@ function WorldMapContainer() {
 
   //Map does not support refocus, so recreating it is necessary
   if (destroyMap) {
-    return <div className="empty w-[1200px] h-[600px]" />;
+    return <div className="empty w-screen h-[600px]" />;
   }
 
   return (
     <div>
-      <div className="flex flex-row">
+      <div className="ml-4 mr-4 flex justify-between">
         <CountrySearch DestroyMapHandler={DestroyMapHandler} />
         <SettingsMenu />
       </div>

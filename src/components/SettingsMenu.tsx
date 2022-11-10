@@ -30,60 +30,84 @@ function SettingsMenu() {
     }
   };
   return (
-    <div
-      className={
-        "border-2 border-red-600 m-4 " +
-        (settings.darkMode ? "" : "bg-white text-black")
-      }
-    >
-      <div>
-        Dark Mode
-        <div
-          className="border border-red-600 cursor-pointer select-none"
-          onClick={() => ToggleSetting("darkMode")}
-        >
-          {settings.darkMode.toString()}
-          <div className="w-16 h-6 border-2 rounded-xl border-blue-600">
+    <div className="m-2">
+      <h4 className="border-b-2 ml-1">Settings</h4>
+      <div
+        className={
+          "overflow-hidden border-opacity-70 flex " +
+          (settings.darkMode ? "" : "bg-white text-black")
+        }
+      >
+        <div className="h-10 bg-slate-800 rounded-lg w-1 ml-1 mt-2"></div>
+        <div className="mr-2 ml-1">
+          Dark Mode
+          <div
+            className="cursor-pointer select-none"
+            onClick={() => ToggleSetting("darkMode")}
+          >
             <div
               className={
-                "w-5 h-5 transition-all border-2 rounded-xl " +
-                (settings.darkMode ? "border-green-700 translate-x-10" : "")
+                "w-12 h-6 border-2 rounded-xl " +
+                (settings.darkMode
+                  ? "bg-green-700 border-green-900/70"
+                  : "border-gray-700/70 bg-gray-600")
               }
-            ></div>
+            >
+              <div
+                className={
+                  "w-5 h-5 transition-all rounded-xl bg-white " +
+                  (settings.darkMode ? "translate-x-6" : "")
+                }
+              ></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        Country Focus
-        <div
-          className="border border-red-600 cursor-pointer select-none"
-          onClick={() => ToggleSetting("selectedFocus")}
-        >
-          {settings.selectedFocus.toString()}
-          <div className="w-16 h-6 border-2 rounded-xl border-blue-600">
+        <div className="h-10 bg-slate-800 rounded-lg w-1 ml-1 mt-2"></div>
+        <div className="mr-2 ml-1">
+          Country Focus
+          <div
+            className="cursor-pointer select-none"
+            onClick={() => ToggleSetting("selectedFocus")}
+          >
             <div
               className={
-                "w-5 h-5 transition-all border-2 rounded-xl " +
-                (settings.selectedFocus ? "border-green-700 translate-x-10" : "")
+                "w-12 h-6 border-2 rounded-xl " +
+                (settings.selectedFocus
+                  ? "bg-green-700 border-green-900/70"
+                  : "border-gray-700/70 bg-gray-600")
               }
-            ></div>
+            >
+              <div
+                className={
+                  "w-5 h-5 transition-all rounded-xl bg-white " +
+                  (settings.selectedFocus ? "translate-x-6 " : "")
+                }
+              ></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        Focus Animation
-        <div
-          className="border border-red-600 cursor-pointer select-none"
-          onClick={() => ToggleSetting("focusAnimation")}
-        >
-          {settings.focusAnimation.toString()}
-          <div className="w-16 h-6 border-2 rounded-xl border-blue-600">
+        <div className="h-10 bg-slate-800 rounded-lg w-1 ml-1 mt-2"></div>
+        <div className="mr-2 ml-1">
+          Focus Animation
+          <div
+            className="cursor-pointer select-none"
+            onClick={() => ToggleSetting("focusAnimation")}
+          >
             <div
               className={
-                "w-5 h-5 transition-all border-2 rounded-xl " +
-                (settings.focusAnimation ? "border-green-700 translate-x-10" : "")
+                "w-12 h-6 border-2 rounded-xl " +
+                (settings.focusAnimation
+                  ? "bg-green-700 border-green-900/70"
+                  : "border-gray-700/70 bg-gray-600")
               }
-            ></div>
+            >
+              <div
+                className={
+                  "w-5 h-5 transition-all rounded-xl bg-white " +
+                  (settings.focusAnimation ? "translate-x-6" : "")
+                }
+              ></div>
+            </div>
           </div>
         </div>
       </div>
