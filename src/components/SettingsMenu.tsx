@@ -38,21 +38,54 @@ function SettingsMenu() {
     >
       <div>
         Dark Mode
-        <button onClick={() => ToggleSetting("darkMode")}>
+        <div
+          className="border border-red-600 cursor-pointer select-none"
+          onClick={() => ToggleSetting("darkMode")}
+        >
           {settings.darkMode.toString()}
-        </button>
+          <div className="w-16 h-6 border-2 rounded-xl border-blue-600">
+            <div
+              className={
+                "w-5 h-5 transition-all border-2 rounded-xl " +
+                (settings.darkMode ? "border-green-700 translate-x-10" : "")
+              }
+            ></div>
+          </div>
+        </div>
       </div>
       <div>
         Country Focus
-        <button onClick={() => ToggleSetting("selectedFocus")}>
+        <div
+          className="border border-red-600 cursor-pointer select-none"
+          onClick={() => ToggleSetting("selectedFocus")}
+        >
           {settings.selectedFocus.toString()}
-        </button>
+          <div className="w-16 h-6 border-2 rounded-xl border-blue-600">
+            <div
+              className={
+                "w-5 h-5 transition-all border-2 rounded-xl " +
+                (settings.selectedFocus ? "border-green-700 translate-x-10" : "")
+              }
+            ></div>
+          </div>
+        </div>
       </div>
       <div>
         Focus Animation
-        <button onClick={() => ToggleSetting("focusAnimation")}>
+        <div
+          className="border border-red-600 cursor-pointer select-none"
+          onClick={() => ToggleSetting("focusAnimation")}
+        >
           {settings.focusAnimation.toString()}
-        </button>
+          <div className="w-16 h-6 border-2 rounded-xl border-blue-600">
+            <div
+              className={
+                "w-5 h-5 transition-all border-2 rounded-xl " +
+                (settings.focusAnimation ? "border-green-700 translate-x-10" : "")
+              }
+            ></div>
+          </div>
+        </div>
       </div>
     </div>
   );

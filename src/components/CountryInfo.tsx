@@ -63,12 +63,34 @@ function CountryInfo() {
     <div className="border border-red-600">
       {info ? (
         <div>
-          <div>Name: {info.name.common}</div>
+          <div>Common Name: {info.name.common}</div>
+          <div>Official Name: {info.name.official}</div>
           <div>Capital: {info.capital[0]}</div>
-          <div>Population: {info.population}</div>
-          <div>Independent: {info.independent.toString()}</div>
-          <div>Languages: {Object.values(info.languages)}</div>
-          <div>Currencies: {Object.keys(info.currencies)}</div>
+          <div>
+            Population: {new Intl.NumberFormat("en-US").format(info.population)}
+          </div>
+          <div>Independent: {info.independent ? "Yes" : "No"}</div>
+          <div>UN Member: {info.unMember ? "Yes" : "No"}</div>
+          <div>
+            Languages:
+            <ul>
+              {Object.values(info.languages).map((item: any, key: number) => {
+                return <li key={key}>{item}</li>;
+              })}
+            </ul>
+          </div>
+          <div>
+            Currencies:
+            <ul>
+              {Object.values(info.currencies).map((item: any, key: number) => {
+                return (
+                  <li key={key}>
+                    {item.symbol} {item.name}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
           <div>
             Flag:
             <img src={info.flags.svg} />
