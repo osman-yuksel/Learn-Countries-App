@@ -17,7 +17,7 @@ function WorldMapContainer() {
   //Map does not support refocus, so recreating it is necessary
   return (
     <div>
-      <div className="ml-4 mr-4 flex justify-between">
+      <div className="ml-4 mr-4 flex flex-col-reverse justify-between md:flex-row">
         <CountrySearch DestroyMapHandler={DestroyMapHandler} />
         <SettingsMenu />
       </div>
