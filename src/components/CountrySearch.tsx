@@ -22,7 +22,12 @@ function CountrySearch(props: { DestroyMapHandler: Function }) {
       </div>
       <div className="mb-4 ml-3 mt-1 flex h-10 w-64 flex-row items-center overflow-hidden rounded-md bg-gray-300 shadow-sm shadow-gray-300 transition-all dark:bg-[#313336] dark:shadow-gray-900">
         <div className="h-8 w-8">
-          <img width={"100%"} height={"100%"} src="icons8-search.svg" />
+          <img
+            width={"100%"}
+            height={"100%"}
+            src="icons8-search.svg"
+            alt="Search icon."
+          />
         </div>
         <input
           className="mr-2 w-52 rounded-sm border-b-2 border-slate-800/60 bg-gray-300 !outline-none  transition-all focus:border-blue-500 dark:border-slate-100/60 dark:bg-[#313336] dark:focus:border-blue-400"
@@ -32,8 +37,8 @@ function CountrySearch(props: { DestroyMapHandler: Function }) {
         />
         {query && (
           <ul
-            className="absolute top-[14.8rem] z-20 inline-block 
-        max-h-44 w-64 cursor-pointer overflow-x-auto rounded-md bg-gray-400/20 backdrop-blur-sm dark:bg-[#313336]/40 dark:backdrop-blur-md md:top-[9.2rem]"
+            className="absolute top-[10.8rem] z-20 inline-block 
+        max-h-44 w-64 cursor-pointer overflow-x-auto rounded-md bg-gray-400/20 backdrop-blur-sm dark:bg-[#313336]/40 dark:backdrop-blur-md md:top-[5.2rem]"
           >
             {validCountries.map((item, key) => {
               return (

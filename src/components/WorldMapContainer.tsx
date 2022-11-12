@@ -17,7 +17,7 @@ function WorldMapContainer() {
   //Map does not support refocus, so recreating it is necessary
   return (
     <div>
-      <h1 className="ml-9 mb-4 mt-2 text-4xl select-none w-72 border-b border-gray-900 dark:text-white dark:border-slate-100/60">
+      <h1 className="ml-9 mb-4 mt-2 text-4xl select-none w-72 hidden border-b border-gray-900 dark:text-white dark:border-slate-100/60">
         Learn Countries
       </h1>
       <div className="ml-4 mr-4 flex flex-col-reverse justify-between md:flex-row">
