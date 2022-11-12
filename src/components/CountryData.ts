@@ -1,3 +1,4 @@
+//Optimizations are required, the file is unnecessarily large.
 export type Country = {
   code: string,
   name: string,

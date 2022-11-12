@@ -31,14 +31,13 @@ function SettingsMenu() {
   };
   return (
     <div className="m-2">
-      <h4 className="border-b-2 ml-1">Settings</h4>
+      <h4 className="border-b-2 border-slate-800/60 ml-1 font-bold">Settings</h4>
       <div
         className={
-          "overflow-hidden border-opacity-70 flex " +
-          (settings.darkMode ? "" : "bg-white text-black")
+          "overflow-hidden border-opacity-70 flex "
         }
       >
-        <div className="h-10 bg-slate-800 rounded-lg w-1 ml-1 mt-2"></div>
+        <div className="h-10 bg-slate-800/60 rounded-lg w-[.2rem] ml-1 mt-2"></div>
         <div className="mr-2 ml-1">
           Dark Mode
           <div
@@ -49,8 +48,8 @@ function SettingsMenu() {
               className={
                 "w-12 h-6 border-2 rounded-xl " +
                 (settings.darkMode
-                  ? "bg-green-700 border-green-900/70"
-                  : "border-gray-700/70 bg-gray-600")
+                  ? "bg-[#33b249] border-green-700/70"
+                  : "border-gray-400/70 bg-gray-200")
               }
             >
               <div
@@ -62,7 +61,7 @@ function SettingsMenu() {
             </div>
           </div>
         </div>
-        <div className="h-10 bg-slate-800 rounded-lg w-1 ml-1 mt-2"></div>
+        <div className="h-10 bg-slate-800/60 rounded-lg w-[.2rem] ml-1 mt-2"></div>
         <div className="mr-2 ml-1">
           Country Focus
           <div
@@ -73,8 +72,10 @@ function SettingsMenu() {
               className={
                 "w-12 h-6 border-2 rounded-xl " +
                 (settings.selectedFocus
-                  ? "bg-green-700 border-green-900/70"
-                  : "border-gray-700/70 bg-gray-600")
+                  ? "bg-[#33b249] border-green-700/70"
+                  : settings.darkMode
+                  ? "border-gray-700/70 bg-gray-600"
+                  : "border-gray-400/70 bg-gray-200")
               }
             >
               <div
@@ -86,7 +87,7 @@ function SettingsMenu() {
             </div>
           </div>
         </div>
-        <div className="h-10 bg-slate-800 rounded-lg w-1 ml-1 mt-2"></div>
+        <div className="h-10 bg-slate-800/60 rounded-lg w-[.2rem] ml-1 mt-2"></div>
         <div className="mr-2 ml-1">
           Focus Animation
           <div
@@ -97,8 +98,10 @@ function SettingsMenu() {
               className={
                 "w-12 h-6 border-2 rounded-xl " +
                 (settings.focusAnimation
-                  ? "bg-green-700 border-green-900/70"
-                  : "border-gray-700/70 bg-gray-600")
+                  ? "bg-[#33b249] border-green-700/70"
+                  : settings.darkMode
+                  ? "border-gray-700/70 bg-gray-600"
+                  : "border-gray-400/70 bg-gray-200")
               }
             >
               <div

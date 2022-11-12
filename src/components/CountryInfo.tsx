@@ -60,46 +60,85 @@ function CountryInfo() {
   }, [info]);
 
   return (
-    <div className="border border-red-600">
+    <div className="mb-4">
       {info ? (
-        <div>
-          <div>Common Name: {info.name.common}</div>
-          <div>Official Name: {info.name.official}</div>
-          <div>Capital: {info.capital[0]}</div>
-          <div>
-            Population: {new Intl.NumberFormat("en-US").format(info.population)}
+        <div className="flex">
+          <div className="flex flex-col w-2/4">
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              Common Name <div className="text-lg">{info.name.common}</div>
+            </div>
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              Official Name <div className="text-lg">{info.name.official}</div>
+            </div>
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              Capital <div className="text-lg">{info.capital[0]}</div>
+            </div>
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              Population
+              <div className="text-lg">
+                {new Intl.NumberFormat("en-US").format(info.population)}
+              </div>
+            </div>
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              Independent
+              <div className="text-lg">{info.independent ? "Yes" : "No"}</div>
+            </div>
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              UN Member
+              <div className="text-lg">{info.unMember ? "Yes" : "No"}</div>
+            </div>
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              Languages
+              <ul className="text-lg">
+                {Object.values(info.languages).map((item: any, key: number) => {
+                  return (
+                    <li className="before:content-['-']" key={key}>
+                      {" "}
+                      {item}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="border-b-2 border-b-black w-3/4 p-1">
+              Currencies
+              <ul className="text-lg">
+                {Object.values(info.currencies).map(
+                  (item: any, key: number) => {
+                    return (
+                      <li className="before:content-['-']" key={key}>
+                        {" "}
+                        {item.symbol} {item.name}
+                      </li>
+                    );
+                  }
+                )}
+              </ul>
+            </div>
           </div>
-          <div>Independent: {info.independent ? "Yes" : "No"}</div>
-          <div>UN Member: {info.unMember ? "Yes" : "No"}</div>
-          <div>
-            Languages:
-            <ul>
-              {Object.values(info.languages).map((item: any, key: number) => {
-                return <li key={key}>{item}</li>;
-              })}
-            </ul>
-          </div>
-          <div>
-            Currencies:
-            <ul>
-              {Object.values(info.currencies).map((item: any, key: number) => {
-                return (
-                  <li key={key}>
-                    {item.symbol} {item.name}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div>
-            Flag:
-            <img src={info.flags.svg} />
+          <div className="mr-2 w-2/4">
+            Flag
+            <img className="border border-black" src={info.flags.svg} />
+            <div className="mt-4">
+              <a
+                className="border-b-2 p-2 border-black w-[11.7rem] hover:bg-black hover:text-white transition-all hover:rounded-sm hover:cursor-pointer"
+                href={
+                  "https://en.wikipedia.org/w/index.php?title=Special:Search&search=" +
+                  info.name.common
+                }
+                target="_blank"
+              >
+                Learn more at Wikipedia
+              </a>
+            </div>
           </div>
         </div>
       ) : country ? (
-        <div>Error!</div>
+        <div className="text-lg text-center">An unexpected error happened!</div>
       ) : (
-        <div>Select a country</div>
+        <div className="text-lg text-center">
+          Please select a country for country info.
+        </div>
       )}
     </div>
   );

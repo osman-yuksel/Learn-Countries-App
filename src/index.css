@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.jvm-zoom-btn {
+  padding: 8px;
+  height: 28px;
+  width: 25px;
+  left: 10px;
+}
+
+.jvm-zoomout {
+  top: 40px !important;
+}

@@ -17,34 +17,32 @@ function CountrySearch(props: { DestroyMapHandler: Function }) {
 
   return (
     <div className="group flex flex-col mt-2">
-      <div className="ml-3 border-b-2">
-        <h2>Search</h2>
+      <div className="ml-3 border-b-2 border-slate-800/60">
+        <h2 className="font-bold">Search</h2>
       </div>
-      <div className="m-4 ml-3 mt-1 w-64 h-10 border-2 border-gray-900/60 rounded-lg overflow-hidden flex flex-row items-center transition-all">
-        <div className="w-9 h-8">
-          <img
-            width={"100%"}
-            height={"100%"}
-            src="../../public/icons8-search.svg"
-          />
+      <div className="mb-4 ml-3 mt-1 w-64 h-10 bg-gray-400/25 rounded-md overflow-hidden flex flex-row items-center transition-all">
+        <div className="w-8 h-8">
+          <img width={"100%"} height={"100%"} src="/icons8-search.svg" />
         </div>
         <input
-          className="mr-2 w-52 border-b-2 text-2xl border-white focus:border-blue-600 !outline-none rounded-sm  transition-all"
-          placeholder="?"
+          className="mr-2 w-52 border-b-2 bg-gray-200/20 border-gray-400 focus:border-blue-500  !outline-none rounded-sm  transition-all"
+          placeholder="Name"
           onChange={OnChangeInput}
+          value={query}
         />
         {query && (
           <ul
-            className="overflow-x-auto max-h-32 absolute inline-block 
-        mt-44 border-2 rounded-xl w-64 border-gray-900/60 cursor-pointer z-10"
+            className="overflow-x-auto max-h-44 absolute inline-block 
+        top-[5.2rem] p-1 rounded-md w-64 bg-gray-400/20 backdrop-blur-sm drop-shadow-lg cursor-pointer z-10"
           >
             {validCountries.map((item, key) => {
               return (
                 <li
                   key={key}
-                  className="border-2 rounded-md border-red-400 m-1"
+                  className="border-b-2 border-black m-1 p-1 hover:bg-black hover:text-white transition-all hover:rounded-md hover:cursor-pointer"
                   onClick={() => {
                     setCountry(item.country.code);
+                    setQuery("");
                     props.DestroyMapHandler();
                   }}
                 >

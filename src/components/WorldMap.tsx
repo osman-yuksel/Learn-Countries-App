@@ -48,7 +48,11 @@ function WorldMap(props: { DestroyMapHandler: Function }) {
     };
   }, []);
 
-  return <div className="w-full h-[50vh] flex justify-center"><div id="map" style={{ width: "100%", height: "100%" }} /></div>;
+  return (
+    <div className="w-auto h-[50vh] flex justify-center">
+      <div id="map" style={{ width: "100%", height: "100%" }} />
+    </div>
+  );
 }
 
 export default WorldMap;
