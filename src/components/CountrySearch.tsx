@@ -16,30 +16,30 @@ function CountrySearch(props: { DestroyMapHandler: Function }) {
   }
 
   return (
-    <div className="group flex flex-col mt-2">
-      <div className="ml-3 border-b-2 border-slate-800/60">
+    <div className="group m-2 flex flex-col rounded-md pr-1 shadow-md shadow-gray-400 dark:text-white dark:shadow-gray-900">
+      <div className="ml-3 border-b-2 border-slate-800/60 dark:border-slate-100/60">
         <h2 className="font-bold">Search</h2>
       </div>
-      <div className="mb-4 ml-3 mt-1 w-64 h-10 bg-gray-400/25 rounded-md overflow-hidden flex flex-row items-center transition-all">
-        <div className="w-8 h-8">
-          <img width={"100%"} height={"100%"} src="/icons8-search.svg" />
+      <div className="mb-4 ml-3 mt-1 flex h-10 w-64 flex-row items-center overflow-hidden rounded-md bg-gray-300 shadow-sm shadow-gray-300 transition-all dark:bg-[#313336] dark:shadow-gray-900">
+        <div className="h-8 w-8">
+          <img width={"100%"} height={"100%"} src="icons8-search.svg" />
         </div>
         <input
-          className="mr-2 w-52 border-b-2 bg-gray-200/20 border-gray-400 focus:border-blue-500  !outline-none rounded-sm  transition-all"
+          className="mr-2 w-52 rounded-sm border-b-2 border-slate-800/60 bg-gray-300 !outline-none  transition-all focus:border-blue-500 dark:border-slate-100/60 dark:bg-[#313336] dark:focus:border-blue-400"
           placeholder="Name"
           onChange={OnChangeInput}
           value={query}
         />
         {query && (
           <ul
-            className="overflow-x-auto max-h-44 absolute inline-block 
-        top-[10.8rem] md:top-[5.2rem] p-1 rounded-md w-64 bg-gray-400/20 backdrop-blur-sm drop-shadow-lg cursor-pointer z-10"
+            className="absolute top-[14.8rem] z-20 inline-block 
+        max-h-44 w-64 cursor-pointer overflow-x-auto rounded-md bg-gray-400/20 backdrop-blur-sm dark:bg-[#313336]/40 dark:backdrop-blur-md md:top-[9.2rem]"
           >
             {validCountries.map((item, key) => {
               return (
                 <li
                   key={key}
-                  className="border-b-2 border-black m-1 p-1 hover:bg-black hover:text-white transition-all hover:rounded-md hover:cursor-pointer"
+                  className="m-1 border-b-2 border-black p-1 transition-all hover:cursor-pointer hover:rounded-md hover:bg-black hover:text-white"
                   onClick={() => {
                     setCountry(item.country.code);
                     setQuery("");

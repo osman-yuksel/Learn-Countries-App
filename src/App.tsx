@@ -1,7 +1,7 @@
 import WorldMapContainer from "./components/WorldMapContainer";
 import MobileDevice from "./components/MobileDevice";
 import { SelectedCountryProvider } from "./components/SelectedCountryContext";
-import { SettingsProvider } from "./components/SettingsContext";
+import { useSettings } from "./components/SettingsContext";
 
 function App() {
   let hasTouchScreen = false;
@@ -19,17 +19,23 @@ function App() {
     );
   }
 
+  const { settings, setSettings } = useSettings();
+
   return (
-    <div className="App flex justify-center">
-      <div className="w-10/12 overflow-hidden font-[Barlow] border-l-2 border-r-2">
-        <SettingsProvider>
+    <div className={"" + (settings.darkMode ? "dark" : "")}>
+      <div className="App dark:bg-gradient-radial flex min-h-screen justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-300 via-gray-400 to-gray-600 dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-gray-700 dark:via-gray-900 dark:to-black">
+        <div className="dark:invert mt-2">
+          <img src="icons8-geography-64.png" />
+        </div>
+        <div className="w-10/12 overflow-hidden border-l border-r font-[Barlow] dark:border-black">
           <SelectedCountryProvider>
             <WorldMapContainer />
           </SelectedCountryProvider>
-        </SettingsProvider>
+        </div>
       </div>
     </div>
   );
 }
 
 export default App;
+

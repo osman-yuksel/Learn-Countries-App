@@ -30,14 +30,11 @@ function SettingsMenu() {
     }
   };
   return (
-    <div className="m-2">
-      <h4 className="border-b-2 border-slate-800/60 ml-1 font-bold">Settings</h4>
-      <div
-        className={
-          "overflow-hidden border-opacity-70 flex "
-        }
-      >
-        <div className="h-10 bg-slate-800/60 rounded-lg w-[.2rem] ml-1 mt-2"></div>
+    <div className="m-2 group flex flex-col rounded-md pr-1 shadow-md shadow-gray-400 dark:text-white dark:shadow-gray-900">
+      <h4 className="ml-1 border-b-2 border-slate-800/60 font-bold dark:border-slate-100/60 dark:text-white">
+        Settings
+      </h4>
+      <div className="flex overflow-hidden dark:text-white">
         <div className="mr-2 ml-1">
           Dark Mode
           <div
@@ -46,23 +43,22 @@ function SettingsMenu() {
           >
             <div
               className={
-                "w-12 h-6 border-2 rounded-xl " +
+                "h-6 w-12 rounded-xl border-2 " +
                 (settings.darkMode
-                  ? "bg-[#33b249] border-[#33b249]"
-                  : "border-gray-400/70 bg-gray-200")
+                  ? "border-[#33b249] bg-[#33b249]"
+                  : "border-gray-200 bg-gray-200")
               }
             >
               <div
                 className={
-                  "w-5 h-5 transition-all rounded-xl bg-white " +
-                  (settings.darkMode ? "translate-x-6" : "")
+                  "h-5 w-5 rounded-xl bg-white transition-all dark:translate-x-6"
                 }
               ></div>
             </div>
           </div>
         </div>
-        <div className="h-10 bg-slate-800/60 rounded-lg w-[.2rem] ml-1 mt-2"></div>
-        <div className="mr-2 ml-1">
+        <div className="mt-2 h-10 w-[.1rem] rounded-lg bg-slate-800/60 dark:bg-slate-100/60"></div>
+        <div className="mr-2 ml-2">
           Country Focus
           <div
             className="cursor-pointer select-none"
@@ -70,25 +66,23 @@ function SettingsMenu() {
           >
             <div
               className={
-                "w-12 h-6 border-2 rounded-xl " +
+                "h-6 w-12 rounded-xl border-2 " +
                 (settings.selectedFocus
-                  ? "bg-[#33b249] border-[#33b249]"
-                  : settings.darkMode
-                  ? "border-gray-700/70 bg-gray-600"
-                  : "border-gray-400/70 bg-gray-200")
+                  ? "border-[#33b249] bg-[#33b249] "
+                  : "border-gray-200 bg-gray-200 dark:border-gray-600 dark:bg-gray-600")
               }
             >
               <div
                 className={
-                  "w-5 h-5 transition-all rounded-xl bg-white " +
+                  "h-5 w-5 rounded-xl bg-white transition-all " +
                   (settings.selectedFocus ? "translate-x-6 " : "")
                 }
               ></div>
             </div>
           </div>
         </div>
-        <div className="h-10 bg-slate-800/60 rounded-lg w-[.2rem] ml-1 mt-2"></div>
-        <div className="mr-2 ml-1">
+        <div className="mt-2 h-10 w-[.1rem] rounded-lg bg-slate-800/60 dark:bg-slate-100/60"></div>
+        <div className="mr-2 ml-2">
           Focus Animation
           <div
             className="cursor-pointer select-none"
@@ -96,17 +90,15 @@ function SettingsMenu() {
           >
             <div
               className={
-                "w-12 h-6 border-2 rounded-xl " +
+                "h-6 w-12 rounded-xl border-2 " +
                 (settings.focusAnimation
-                  ? "bg-[#33b249] border-[#33b249]"
-                  : settings.darkMode
-                  ? "border-gray-700/70 bg-gray-600"
-                  : "border-gray-400/70 bg-gray-200")
+                  ? "border-[#33b249] bg-[#33b249]"
+                  : "border-gray-200 bg-gray-200 dark:border-gray-600 dark:bg-gray-600")
               }
             >
               <div
                 className={
-                  "w-5 h-5 transition-all rounded-xl bg-white " +
+                  "h-5 w-5 rounded-xl bg-white transition-all " +
                   (settings.focusAnimation ? "translate-x-6" : "")
                 }
               ></div>

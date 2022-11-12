@@ -22,12 +22,18 @@ const SettingsContext = createContext<Settings>({} as Settings);
 export const SettingsProvider = ({ children }: { children: ReactNode }) => {
   //Set default settings if none exists
   if (!localStorage.getItem("settings")) {
+    const motionQuery: MediaQueryList = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+    const themeQuery: MediaQueryList = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
     localStorage.setItem(
       "settings",
       JSON.stringify({
-        darkMode: true,
-        selectedFocus: true,
-        focusAnimation: true,
+        darkMode: themeQuery.matches ? true : false,
+        selectedFocus: !motionQuery || motionQuery.matches ? false : true,
+        focusAnimation: !motionQuery || motionQuery.matches ? false : true,
       })
     );
   }
@@ -37,9 +43,9 @@ export const SettingsProvider = ({ children }: { children: ReactNode }) => {
   const [settings, setSettings] = useState<SettingsData>(
     (localSettings ? JSON.parse(localSettings) : null) as SettingsData
   );
-  
+
   useEffect(() => {
-    console.log("Provider", settings);
+    //console.log("Provider", settings);
     localStorage.setItem(
       "settings",
       JSON.stringify({

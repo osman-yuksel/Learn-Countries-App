@@ -50,7 +50,12 @@ function WorldMap(props: { DestroyMapHandler: Function }) {
   }, []);
 
   return (
-    <div className="w-auto h-[50vh] flex justify-center">
+    <div className="flex flex-col h-[50vh] w-auto justify-center">
+      {!country && (
+        <p className="tip-text pointer-events-none select-none text-center mb-1 dark:text-white">
+          Tip: Use your scroll wheel to zoom in or out.
+        </p>
+      )}
       <div id="map" style={{ width: "100%", height: "100%" }} />
     </div>
   );

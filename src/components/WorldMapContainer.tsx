@@ -17,14 +17,17 @@ function WorldMapContainer() {
   //Map does not support refocus, so recreating it is necessary
   return (
     <div>
+      <h1 className="ml-9 mb-4 mt-2 text-4xl select-none w-72 border-b border-gray-900 dark:text-white dark:border-slate-100/60">
+        Learn Countries
+      </h1>
       <div className="ml-4 mr-4 flex flex-col-reverse justify-between md:flex-row">
         <CountrySearch DestroyMapHandler={DestroyMapHandler} />
         <SettingsMenu />
       </div>
       <div className="flex flex-col">
-        <div className="border-t-2 border-b-2">
+        <div className="border-t border-b dark:border-black">
           {destroyMap ? (
-            <div className="empty w-auto h-[50vh]" />
+            <div className="empty h-[50vh] w-auto" />
           ) : (
             <WorldMap DestroyMapHandler={DestroyMapHandler} />
           )}
