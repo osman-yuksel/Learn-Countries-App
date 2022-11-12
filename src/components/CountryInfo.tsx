@@ -148,7 +148,7 @@ function CountryInfo() {
               </div>
             </div>
           </div>
-          <div className="border-t border-t-gray-900/60 text-center">
+          <div className="mt-4 border-t border-t-gray-900/60 text-center">
             This app is not associated with Wikipedia or restcountries.com.
           </div>
           <div className="text-center underline">
