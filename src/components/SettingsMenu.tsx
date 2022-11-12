@@ -15,7 +15,7 @@ function SettingsMenu() {
         setSettings({
           darkMode: settings.darkMode,
           selectedFocus: !settings.selectedFocus,
-          focusAnimation: settings.focusAnimation,
+          focusAnimation: settings.focusAnimation && !settings.selectedFocus,
         });
         break;
       case "focusAnimation":
@@ -48,7 +48,7 @@ function SettingsMenu() {
               className={
                 "w-12 h-6 border-2 rounded-xl " +
                 (settings.darkMode
-                  ? "bg-[#33b249] border-green-700/70"
+                  ? "bg-[#33b249] border-[#33b249]"
                   : "border-gray-400/70 bg-gray-200")
               }
             >
@@ -72,7 +72,7 @@ function SettingsMenu() {
               className={
                 "w-12 h-6 border-2 rounded-xl " +
                 (settings.selectedFocus
-                  ? "bg-[#33b249] border-green-700/70"
+                  ? "bg-[#33b249] border-[#33b249]"
                   : settings.darkMode
                   ? "border-gray-700/70 bg-gray-600"
                   : "border-gray-400/70 bg-gray-200")
@@ -98,7 +98,7 @@ function SettingsMenu() {
               className={
                 "w-12 h-6 border-2 rounded-xl " +
                 (settings.focusAnimation
-                  ? "bg-[#33b249] border-green-700/70"
+                  ? "bg-[#33b249] border-[#33b249]"
                   : settings.darkMode
                   ? "border-gray-700/70 bg-gray-600"
                   : "border-gray-400/70 bg-gray-200")

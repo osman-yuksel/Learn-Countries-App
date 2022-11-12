@@ -33,7 +33,7 @@ function CountrySearch(props: { DestroyMapHandler: Function }) {
         {query && (
           <ul
             className="overflow-x-auto max-h-44 absolute inline-block 
-        top-[5.2rem] p-1 rounded-md w-64 bg-gray-400/20 backdrop-blur-sm drop-shadow-lg cursor-pointer z-10"
+        top-[10.8rem] md:top-[5.2rem] p-1 rounded-md w-64 bg-gray-400/20 backdrop-blur-sm drop-shadow-lg cursor-pointer z-10"
           >
             {validCountries.map((item, key) => {
               return (

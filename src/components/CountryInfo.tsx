@@ -27,7 +27,6 @@ function CountryInfo() {
 
   async function FetchData(code: string) {
     const data: any = await fetchData(country);
-    console.log("DATA: ", data);
     switch (code) {
       case "IR": //Iran
         setInfo(data[1]);

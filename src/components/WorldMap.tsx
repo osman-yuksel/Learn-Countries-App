@@ -27,6 +27,7 @@ function WorldMap(props: { DestroyMapHandler: Function }) {
         selectedHover: { fill: "purple" },
       },
       selectedRegions: [country],
+      bindTouchEvents: false,
     });
 
     //Create event listeners for countries
