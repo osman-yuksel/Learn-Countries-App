@@ -24,9 +24,23 @@ function App() {
   return (
     <div className={"" + (settings.darkMode ? "dark" : "")}>
       <div className="App dark:bg-gradient-radial flex min-h-screen justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-300 via-gray-400 to-gray-600 dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-gray-700 dark:via-gray-900 dark:to-black">
-        <div className="dark:invert mt-2">
-          <img className="h-[4.3rem]"
-          src="icons8-geography-64.png" alt="Geographic World icon."/>
+        <div className="mt-2 dark:invert">
+          <div className="mt-2 w-16">
+            <img
+              className="w-16 transition-all hover:scale-105 hover:invert dark:hover:invert-0"
+              src="icons8-geography-64.png"
+              alt="Geographic World icon."
+            />
+          </div>
+          <div className="group mt-4 flex w-16 justify-center transition-all hover:scale-105 hover:invert dark:hover:invert-0">
+            <a
+              className="w-10 group-hover:scale-105"
+              href="https://github.com/osman-yuksel/Learn-Countries-App"
+              target={"_blank"}
+            >
+              <img src="GitHub-Mark-64px.png" alt="Github logo" />
+            </a>
+          </div>
         </div>
         <div className="w-10/12 overflow-hidden border-l border-r font-[Barlow] dark:border-black">
           <SelectedCountryProvider>
@@ -39,4 +53,3 @@ function App() {
 }
 
 export default App;
-
