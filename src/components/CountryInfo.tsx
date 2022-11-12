@@ -34,6 +34,9 @@ function CountryInfo() {
       case "NE": //Niger
         setInfo(data[1]);
         break;
+      case "CG": //Congo
+        setInfo(data[1]);
+        break;
       default:
         setInfo(data[0]);
         break;
