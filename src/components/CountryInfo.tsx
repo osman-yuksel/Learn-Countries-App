@@ -136,7 +136,7 @@ function CountryInfo() {
               />
               <div className="mt-4">
                 <a
-                  className="w-[11.7rem] border-b-2 border-black p-2 pl-2 shadow-md shadow-gray-600 transition-all hover:cursor-pointer hover:rounded-sm hover:bg-black hover:text-white dark:border-[#2c3138] dark:shadow-gray-900 dark:hover:border-black"
+                  className="border-b-2 w-[11.7rem] border-black p-2 pl-0 pb-0 shadow-md shadow-gray-600 transition-all hover:cursor-pointer hover:rounded-sm hover:bg-black hover:text-white dark:border-[#2c3138] dark:shadow-gray-900 dark:hover:border-black sm:pl-2 sm:pb-2"
                   href={
                     "https://en.wikipedia.org/w/index.php?title=Special:Search&search=" +
                     info.name.common
