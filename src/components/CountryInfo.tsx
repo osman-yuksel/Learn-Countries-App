@@ -65,8 +65,8 @@ function CountryInfo() {
     <div className="mb-4 dark:text-white">
       {info ? (
         <div>
-          <div className="flex">
-            <div className="flex w-2/4 flex-col">
+          <div className="flex flex-col sm:flex-row">
+            <div className="flex w-full flex-col sm:w-2/4">
               <div className="w-3/4 border-b-2 border-b-black p-1 pl-2 shadow-md shadow-gray-500 dark:border-[#2c3138] dark:shadow-gray-900">
                 Common Name <div className="text-lg">{info.name.common}</div>
               </div>
@@ -128,7 +128,7 @@ function CountryInfo() {
                 Data are taken from <strong>restcountries.com</strong>
               </a>
             </div>
-            <div className="mr-2 w-2/4">
+            <div className="mr-2 mt-2 w-full sm:mt-0 sm:w-2/4">
               Flag
               <img
                 className="border border-black shadow-md shadow-gray-600"
@@ -136,7 +136,7 @@ function CountryInfo() {
               />
               <div className="mt-4">
                 <a
-                  className="border-b-2 w-[11.7rem] border-black p-2 pl-0 pb-0 shadow-md shadow-gray-600 transition-all hover:cursor-pointer hover:rounded-sm hover:bg-black hover:text-white dark:border-[#2c3138] dark:shadow-gray-900 dark:hover:border-black sm:pl-2 sm:pb-2"
+                  className="w-[11.7rem] border-b-2 border-black p-2 pl-0 pb-0 shadow-md shadow-gray-600 transition-all hover:cursor-pointer hover:rounded-sm hover:bg-black hover:text-white dark:border-[#2c3138] dark:shadow-gray-900 dark:hover:border-black sm:pl-2 sm:pb-2"
                   href={
                     "https://en.wikipedia.org/w/index.php?title=Special:Search&search=" +
                     info.name.common
