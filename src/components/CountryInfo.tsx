@@ -18,7 +18,6 @@ function CountryInfo() {
     languages: z.any(),
     population: z.number(),
     flags: z.object({ png: z.string(), svg: z.string() }),
-    altSpellings: z.array(z.string()),
   });
   type CountryInfo = z.infer<typeof countrySchema>;
 
@@ -71,8 +70,7 @@ function CountryInfo() {
                 Common Name <div className="text-lg">{info.name.common}</div>
               </div>
               <div className="w-3/4 border-b-2 border-b-black p-1 pl-2 shadow-md shadow-gray-500 dark:border-[#2c3138] dark:shadow-gray-900">
-                Official Name{" "}
-                <div className="text-lg">{info.name.official}</div>
+                Official Name <div className="text-lg">{info.name.official}</div>
               </div>
               <div className="w-3/4 border-b-2 border-b-black p-1 pl-2 shadow-md shadow-gray-500 dark:border-[#2c3138] dark:shadow-gray-900">
                 Capital <div className="text-lg">{info.capital[0]}</div>
@@ -94,46 +92,36 @@ function CountryInfo() {
               <div className="w-3/4 border-b-2 border-b-black p-1 pl-2 shadow-md shadow-gray-500 dark:border-[#2c3138] dark:shadow-gray-900">
                 Languages
                 <ul className="text-lg">
-                  {Object.values(info.languages).map(
-                    (item: any, key: number) => {
-                      return (
-                        <li className="before:content-['-']" key={key}>
-                          {" "}
-                          {item}
-                        </li>
-                      );
-                    }
-                  )}
+                  {Object.values(info.languages).map((item: any, key: number) => {
+                    return (
+                      <li className="before:content-['-']" key={key}>
+                        {" "}
+                        {item}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <div className="w-3/4 border-b-2 border-b-black p-1 pl-2 shadow-md shadow-gray-500 dark:border-[#2c3138] dark:shadow-gray-900">
                 Currencies
                 <ul className="text-lg">
-                  {Object.values(info.currencies).map(
-                    (item: any, key: number) => {
-                      return (
-                        <li className="before:content-['-']" key={key}>
-                          {" "}
-                          {item.symbol} {item.name}
-                        </li>
-                      );
-                    }
-                  )}
+                  {Object.values(info.currencies).map((item: any, key: number) => {
+                    return (
+                      <li className="before:content-['-']" key={key}>
+                        {" "}
+                        {item.symbol} {item.name}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
-              <a
-                className="mt-2 ml-1 opacity-60"
-                href="https://restcountries.com/"
-              >
+              <a className="mt-2 ml-1 opacity-60" href="https://restcountries.com/">
                 Data are taken from <strong>restcountries.com</strong>
               </a>
             </div>
             <div className="mr-2 mt-2 w-full sm:mt-0 sm:w-2/4">
               Flag
-              <img
-                className="border border-black shadow-md shadow-gray-600"
-                src={info.flags.svg}
-              />
+              <img className="border border-black shadow-md shadow-gray-600" src={info.flags.svg} />
               <div className="mt-4">
                 <a
                   className="w-[11.7rem] border-b-2 border-black p-2 pl-0 pb-0 shadow-md shadow-gray-600 transition-all hover:cursor-pointer hover:rounded-sm hover:bg-black hover:text-white dark:border-[#2c3138] dark:shadow-gray-900 dark:hover:border-black sm:pl-2 sm:pb-2"
@@ -161,9 +149,7 @@ function CountryInfo() {
       ) : country ? (
         <div className="text-center text-lg">An unexpected error happened!</div>
       ) : (
-        <div className="text-center text-lg">
-          Please select a country for country info.
-        </div>
+        <div className="text-center text-lg">Please select a country for country info.</div>
       )}
     </div>
   );
